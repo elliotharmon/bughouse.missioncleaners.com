@@ -1,0 +1,49 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='/style.css' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+
+<title>Bug House</title>
+
+<script src="http://code.jquery.com/jquery-1.11.2.js"></script>
+<script src="/audiojs/audio.min.js"></script>
+
+	{% include script-playlist.html %}
+
+</head>
+</body>
+
+<h1>Bug House</h1>
+<h2>Poems by<br />Logan Ryan Smith</h2>
+<p><a href="http://www.amazon.com/dp/0988795817/?m=A2RNQKHTBGQ3HW" target="_blank">Buy the book.</a></p>
+<p>&#160;</p>
+<p>Recorded by phone in the summer of 2012.</p>			
+<p>&#160;</p>
+
+			<audio preload></audio>
+
+<ol class="songs">
+
+	{% for track in site.data.tracks %}
+		<li class="song"><a href="#" data-src="{{ track.url }}"><strong>{{ track.title | markdownify }}</strong></a></li>
+	{% endfor %}
+
+</ol>
+
+<a href="http://www.missioncleaners.com/" target="_blank"><h3>Mission Cleaners Books</h3></a>
+
+<p>&#160;</p>
+<p>&#160;</p>
+<p align="right"><a href="/bughouse.zip">Download MP3s</a><br /><a href="http://guidebycell.com/" target="_blank">Recorded with Guide by Cell</a></p>
+<p>&#160;</p>
+<p>&#160;</p>
+
+</body>
+</html>
